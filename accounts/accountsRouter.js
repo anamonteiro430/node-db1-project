@@ -6,11 +6,14 @@ const db = require('../data/dbConfig.js');
 const router = express.Router();
 
 router.get('/', (req, res) => {
+	const limit = req.params;
+	console.log(limit);
 	//list of accounts
 	//select from accounts
 	//all databases operations return a promise
 	db.select('*')
 		.from('accounts')
+		.limit(limit)
 		.then(accounts => {
 			res.status(200).json(accounts);
 		})
