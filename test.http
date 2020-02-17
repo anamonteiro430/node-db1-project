@@ -1,0 +1,9 @@
+
+# REST Client tests on https://github.com/tronalddump-io/tronald-app
+@baseUrl = http://localhost:4000
+
+### Get a random clever quote
+GET {{baseUrl}}/api/posts
+Accept: application/hal+json
+
+
