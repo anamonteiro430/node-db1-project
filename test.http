@@ -1,9 +1,36 @@
 
-# REST Client tests on https://github.com/tronalddump-io/tronald-app
 @baseUrl = http://localhost:4000
 
-### Get a random clever quote
-GET {{baseUrl}}/api/posts
-Accept: application/hal+json
 
+GET {{baseUrl}}/api/accounts/
+
+###
+
+GET {{baseUrl}}/api/accounts/1
+
+### 
+
+POST {{baseUrl}}/api/accounts/
+content-type: application/json
+
+{
+    "name": "sawmplwwe",
+    "budget": "22212"
+}
+
+###
+
+PUT {{baseUrl}}/api/accounts/1
+content-type: application/json
+
+{
+    "name": "numbssers1",
+    "budget": "22112"
+}
+
+###
+DELETE {{baseUrl}}/api/accounts/2
+
+
+Accept: application/hal+json
 
